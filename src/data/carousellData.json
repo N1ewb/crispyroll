@@ -1,0 +1,16 @@
+{
+    "slides": [
+        {
+            "src": "./frieren.jpg",
+            "alt": "Wallpaper HD 1"
+        },
+        {
+            "src": "./maquia.webp",
+            "alt": "Wallpaper HD 2"
+        },
+        {
+            "src": "./silentvoice.jpg",
+            "alt": "Wallpaper HD 3"
+        }
+    ]
+}

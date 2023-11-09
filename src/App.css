@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap');
+.header-container {
+  width: 100%;
+  height: 3.75rem;
+  background-color: #23252b;
+  position: fixed;
+  z-index: 100;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  vertical-align: middle;
+  align-items: center;
+  margin: 0;
 }
-
-.App-link {
-  color: #61dafb;
+.nav-bar{
+  display: flex;
+  width: 1100px;
+  margin: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-wrapper {
+  display: flex;
+  
+}
+.logo-wrapper img{
+  height:1.5rem;
+  width:8rem;
+}
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  width: 550px;
+  justify-content: space-between;
+}
+.nav-links a {
+  margin:0;
+  color:#f8f8f8;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1.25rem 1.125rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+}
+.nav-links a:hover{
+  transition: 0.2s ease-in-out;
+  background-color:#101014  ;
 }
