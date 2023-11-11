@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import "./hero.css"
 import Carouselitems from './carouselitems'
+import RightIcon from '../rightarrow.svg'
+import LeftIcon from '../leftarrow.svg'
 
 const Hero = ({data}) => {
     const [activeIndex, setActiveIndex] = useState(0)
@@ -18,24 +20,25 @@ const Hero = ({data}) => {
     <>
     <div className='hero-container'>
         <div className='carousell' style={{transform:`translate(-${activeIndex * 100}%)`}}>
-        {data.map((data) => {
-          return <Carouselitems data={data}/>
+        {data.map((data, index) => {
+          return <Carouselitems data={data} key={index}/>
         })}
         </div>
         <div className='carousell-buttons'>
-          <button className='button-arrow' onClick={()=>{
+          <img className='button-arrow' onClick={()=>{
             updateIndex(activeIndex - 1)
-          }}>left</button>
+          }} src={LeftIcon}/>
           <div className='indicators'>
             {data.map((data, index)=>{
               return (
-                <span>O</span>
+                <span key={index}>O</span>
               )
             })}
           </div>
-          <button className='button-arrow' onClick={()=>{
+          <img className='button-arrow' onClick={()=>{
             updateIndex(activeIndex + 1)
-          }}>right</button>
+          }} src={RightIcon}/>
+
         </div>
     </div>
     </>

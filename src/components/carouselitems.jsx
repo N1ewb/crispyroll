@@ -4,7 +4,7 @@ function Carouselitems({data}) {
   return (
     <div className='carousell-Items'>
         <div></div>
-        <img className='carousel-item' src={data.src}/>
+        <img className='carousel-item' src={data.src} alt="Carousel Items"/>
         
     </div>
   )
