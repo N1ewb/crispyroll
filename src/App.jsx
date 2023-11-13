@@ -1,50 +1,27 @@
-import React, { useEffect }  from 'react'
-import { useState } from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import AnimeList from './components/AnimeList';
-// import CurrentlyAiring from './components/currentlyAiring';
+import Home from './pages/Home';
+import Search from './pages/search';
+import Animepage from './pages/Animepage';
 
 import './App.css';
-// import { BrowserRouter } from 'react-router-dom';
-import AiringList from './components/AiringList';
-
-const API_URL = 'https://api.jikan.moe/v4/anime?'
 
 function App() {
   
-  const data = [
-    {
-        "src": "./freiren.webp",
-        "alt": "Wallpaper HD 1"
-    },
-    {
-        "src": "./maquia.png",
-        "alt": "Wallpaper HD 2"
-    },
-    {
-        "src": "./86.webp",
-        "alt": "Wallpaper HD 3"
-    }
-  ]
 
   return (
-    <>
+    <Router>
+      
       <Header />
-      
-      <section className='slide-section'>
-        <Hero data={data}/>
-      </section>
-
-      <section className='currently-airing'>
-        <AiringList />
-      </section> 
-      
-      <section className='Anilist-section'>
-        <AnimeList />
-      </section> 
-      
-    </>
+      <div className='App'>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+        <Route path={`/Animepage/:id`} element={<Animepage />} />
+      </Routes>
+      </div>
+    </Router>
   );
 }
 

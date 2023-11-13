@@ -1,3 +1,82 @@
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 836px) {
+    .carousell {
+        transform: translateX(50%);
+    }
+}
+@media screen and (max-width: 1920px){
+    .burgir{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .header-container{
+        display: flex;
+        justify-content: center;
+    }
+    .nav-bar{
+        width:80%;
+    }
+}
+
+@media screen and (max-width: 1020px){
+    .nav-bar{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 920px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: #101014; 
+        height: 600px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+        z-index: 1;
+        
+      }
     
+      .nav-links.visible {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color:black;
+      }
+      .nav-links a {
+        color:white;
+      }
+      .nav-links a:hover {
+        color:white;
+        background-color: rgba(178, 173, 192, 0.1);
+      }
+    
+      .burgir {
+        display: block;
+        cursor: pointer;
+      }
+    .user-action {
+        width:30%;
+    }
+  }
+
+@media screen and (max-width: 720px) {
+    .user-action {
+        width:40%;
+    }
+    .user-action img{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .anime-main-content-container{
+        display:flex;
+        justify-content:center;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }

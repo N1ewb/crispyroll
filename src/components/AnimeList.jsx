@@ -8,23 +8,23 @@ const API_URL = 'https://api.jikan.moe/v4/anime?'
 function AnimeList() {
     
 
-    const [ movies, setMovies ] = useState();
-    const [ search, setSearch ] = useState('');
+    // const [ movies, setMovies ] = useState();
+    // const [ search, setSearch ] = useState('');
 
-    const searchMovies = async() => {
-        const response = await fetch(`${API_URL}q=${search}&limit20`) 
-        const data = await response.json()
-        console.log(data)
-        setMovies(data.data)
-    }
+    // const searchMovies = async() => {
+    //     const response = await fetch(`${API_URL}q=${search}&limit=8`) 
+    //     const data = await response.json()
+    //     console.log(data)
+    //     setMovies(data.data)
+    // }
 
-     useEffect(() => {
-        searchMovies()
-     },[search])
+    //  useEffect(() => {
+    //     searchMovies()
+    //  },[search])
      
   return (
     <>
-        <div className='Animelist'>
+        {/* <div className='Animelist'>
             <div className='movie-card-container'>
                 {
                     movies?.length > 0?(
@@ -40,7 +40,7 @@ function AnimeList() {
                     )
                 }
             </div>
-        </div>
+        </div> */}
     </>
   )
 }

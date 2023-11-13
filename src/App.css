@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
 body{
-  background-color: black;
+  background-color: #141519;
+  overflow-x: hidden;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .header-container {
   width: 100%;
@@ -91,15 +101,49 @@ body{
   height: 400px;
   width: 300px;
 }
+.section-title{
+  display: flex;
+  flex-direction:column;
+  color:white;
+  font-family: 'Lato', sans-serif;
+  width: 99%;
+  margin-left: 50px;
+}
+.section-title h1{
+  font-size: 28px;
 
+}
+.section-title p{
+  color: #a0a0a0;
+}
+.airing-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.airing-card-container p {
+  height: 20px;
+}
 .airing-card-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap:nowrap;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 1100px;
   gap: 20px;
+  right: 10px;
+  z-index: 21;
+}
+.airing-carousell{
+
+  margin-left: 400px;
+  white-space: nowrap;
+  transition: transform 1s, opacity 0.5s ease-in-out; 
+}
+.airing-cards{
+  display: flex;
 }
 .airing-card {
   height: 330px;
@@ -146,6 +190,21 @@ body{
 .airing-container img {
   height: 260px;
   width: 180px;
+  
 }
-
+.airing-buttons{
+  position: relative;
+  top: -200px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 0;
+}
+.airing-buttons img{
+  height: 50px;
+  width: 50px;
+  background-color: rgb(0, 0, 0,0.2);
+  cursor: pointer;
+  z-index: 20;
+}
 
